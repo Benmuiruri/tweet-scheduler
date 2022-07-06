@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   post 'sign_up', to: 'registrations#create'
 
   #Log out user
-  delete 'Logout', to: 'sessions#destroy'
+  delete 'logout', to: 'sessions#destroy'
 end
