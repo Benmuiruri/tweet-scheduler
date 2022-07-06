@@ -4,4 +4,7 @@ Rails.application.routes.draw do
 
   # GET /about
   get 'about-page', to: 'about#index', as: :about
+
+  # New Signup
+  get 'sign_up', to: 'registrations#new'
 end
