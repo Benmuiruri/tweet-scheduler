@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   # New Signup
   get 'sign_up', to: 'registrations#new'
+
+  #Create New Signup
+  post 'sign_up', to: 'registrations#create'
 end
