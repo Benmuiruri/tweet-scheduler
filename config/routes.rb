@@ -10,4 +10,7 @@ Rails.application.routes.draw do
 
   #Create New Signup
   post 'sign_up', to: 'registrations#create'
+
+  #Log out user
+  delete 'Logout', to: 'sessions#destroy'
 end
