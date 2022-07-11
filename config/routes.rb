@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
-  # GET root
   root to: 'main#index'
 
-  # GET /about
   get 'about-page', to: 'about#index', as: :about
 
-  # New Signup
-  get 'sign_up', to: 'registrations#new'
+  #Passwords
+  get "password", to: "password#edit"
+  patch "password", to: "password#update"
 
-  #Create New Signup
+
+  #Sign up
+  get 'sign_up', to: 'registrations#new'
   post 'sign_up', to: 'registrations#create'
 
   #Login 
