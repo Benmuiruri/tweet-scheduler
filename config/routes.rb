@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get 'about-page', to: 'about#index', as: :about
 
   #Passwords
-  get "password", to: "password#edit"
-  patch "password", to: "password#update"
+  get "password", to: "passwords#edit", as: :edit_password
+  patch "password", to: "passwords#update"
 
 
   #Sign up
