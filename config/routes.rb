@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
   #Omniauth 
   get "/auth/twitter/callback", to: "omniauth_callbacks#twitter"
+  get "/auth/twitter/", to: "omniauth_callbacks#twitter"
 
   resources :twitter_accounts
 
