@@ -1,0 +1,13 @@
+<div class="mb-3 card card-body">
+  <%= tweet.body %>
+  <div class="mb-4">
+      <%= image_tag tweet.twitter_account.image, class: "rounded-circle" %>
+      <%= link_to "@#{ tweet.twitter_account.username}", "https://twitter.com/#{ tweet.twitter_account.username}", target: :blank %>
+
+      <% if tweet.published? %>
+      <%= link_to "View Tweet", "https://twitter.com/#{tweet.twitter_account.username}/status/#{tweet.tweet_id}", target: :blank %>
+      <% else %>
+      Scheduled to go out at <%= l tweet.publish_at, format: :long %>
+      <% end %>
+  </div>
+</div>
